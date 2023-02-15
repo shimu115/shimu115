@@ -1,3 +1,5 @@
-# 学校周记+总结
+# 目录
 
-> An awesome project.
+> [周记](journals/journals.md) 
+>
+> 总结

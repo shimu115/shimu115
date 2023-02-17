@@ -1,4 +1,5 @@
-# 
+# journals
+
 # 第一篇    集合
 
 学习集合，集合也是Java中重要的一节，学的不好，对开发会有重大的阻碍。血迹总结如下几点：
@@ -6,16 +7,16 @@
 1. Collection接口的集合有两大类：List和Set
 
     1. List
-           * List的特点是有序，有索引，可重复。
-                1. LinkedList: 接口实现类， 链表， 插入删除， 没有同步， 线程不安全
-                2. ArrayList: 接口实现类， 数组， 随机访问， 没有同步， 线程不安全
-                3. Vector: 接口实现类 数组， 同步， 线程安全; Stack 是Vector类的实现类（已淘汰）
-                4. list里一般情况下用ArrayList，特定情况下用LinkedList
+          * List的特点是有序，有索引，可重复。
+               1. LinkedList: 接口实现类， 链表， 插入删除， 没有同步， 线程不安全
+               2. ArrayList: 接口实现类， 数组， 随机访问， 没有同步， 线程不安全
+               3. Vector: 接口实现类 数组， 同步， 线程安全; Stack 是Vector类的实现类（已淘汰）
+               4. list里一般情况下用ArrayList，特定情况下用LinkedList
     2. Set
-            * HashSet 使用hash表（数组）存储元素
+        * HashSet 使用hash表（数组）存储元素
         * LinkedHashSet 链表维护元素的插入次序
-          Set 底层实现为二叉树，元素排好序
-          一般情况下默认用HashSet，如果对查询需求较高的情况下就可以使用LinkedHashSet
+            Set 底层实现为二叉树，元素排好序
+            一般情况下默认用HashSet，如果对查询需求较高的情况下就可以使用LinkedHashSet
 
 2. Map接口是键值对的集合 （双列集合）
 
@@ -359,7 +360,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
             }
         ~~~
 
-      * BufferedWriter：`public void newLine()`: 写一行行分隔符,由系统属性定义符号。 
+      * BufferedWriter： `public void newLine()` : 写一行行分隔符,由系统属性定义符号。 
 
         ~~~java
         	@Test
@@ -385,6 +386,45 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
 
         ![Snipaste_2023-02-13_10-51-21](https://raw.githubusercontent.com/shimu115/journals/master/img/Snipaste_2023-02-13_10-51-21.png)
 
-        ​	 
+# 第七篇   git 版本控制
 
-        
+* Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
+
+* 可以通过一些命令来控制项目的版本，可以做到迭代版本与回溯版本，在做出更新的时候进行更新版本，出现错误也可以回到以前的某个版本。
+
+## 基本概念
+
+- **工作区：**就是你在电脑里能看到的目录。
+- **暂存区：**英文叫 stage 或 index。一般存放在 **.git** 目录下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。
+- **版本库：**工作区有一个隐藏目录 **.git**，这个不算工作区，而是 Git 的版本库。
+
+下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系：
+
+![Snipaste_2023-02-16_13-17-19](img\Snipaste_2023-02-16_13-17-19.png)
+
+## Git 基本操作
+
+Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。
+
+本章将对有关创建与提交你的项目快照的命令作介绍。
+
+![Snipaste_2023-02-16_13-18-47](img\Snipaste_2023-02-16_13-18-47.png)
+
+Git 常用的是以下 6 个命令：
+
+* **git clone** ：将远程仓库的代码克隆到本地仓库
+* **git push** ：将本地仓库里的代码推送到远程仓库并进行合并
+* **git add** ：将新创建或修改后的代码添加到暂存库
+* **git commit** ：将暂存库里的代码提交到本地仓库
+* **git checkout** ：切换远程仓库的分支
+* **git pull** ：拉取远程代码并合并
+
+
+
+ ***可以查看我的远程仓库，周记都会搭建成在线文档，每周写的都会上传*** 
+
+[github在线文档](https://shimu115.github.io/wuhanxxcb/) (github可能有点慢，gitee搭建在线文档需要实名就先用github搭建了)
+
+[github仓库](https://github.com/shimu115/wuhanxxcb) 
+
+***周记与总结都以md文档的格式编写的，上传到定岗实习平台后看起来可能有些怪*** 

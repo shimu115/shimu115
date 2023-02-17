@@ -152,7 +152,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
 
         如果不使用throws就是下面的结果
 
-        ![Snipaste_2023-02-04_13-21-34](https://raw.githubusercontent.com/shimu115/journals/master/img/Snipaste_2023-02-04_13-21-34.png)
+        ![Snipaste_2023-02-04_13-21-34](img/Snipaste_2023-02-04_13-21-34.png)
 
      2. try...catch
 
@@ -186,7 +186,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
         
         运行结果：
         
-        ![Snipaste_2023-02-04_13-29-50](https://raw.githubusercontent.com/shimu115/journals/master/img/Snipaste_2023-02-04_13-29-50.png)
+        ![Snipaste_2023-02-04_13-29-50](img/Snipaste_2023-02-04_13-29-50.png)
    
 2. 运行时异常
 
@@ -382,9 +382,9 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
 
         输出结果：
 
-        ![Snipaste_2023-02-13_10-50-36](https://raw.githubusercontent.com/shimu115/journals/master/img/Snipaste_2023-02-13_10-50-36.png)
+        ![Snipaste_2023-02-13_10-50-36](img/Snipaste_2023-02-13_10-50-36.png)
 
-        ![Snipaste_2023-02-13_10-51-21](https://raw.githubusercontent.com/shimu115/journals/master/img/Snipaste_2023-02-13_10-51-21.png)
+        ![Snipaste_2023-02-13_10-51-21](img/Snipaste_2023-02-13_10-51-21.png)
 
 # 第七篇   git 版本控制
 

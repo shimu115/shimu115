@@ -428,3 +428,40 @@ Git 常用的是以下 6 个命令：
 [github仓库](https://github.com/shimu115/wuhanxxcb) 
 
 ***周记与总结都以md文档的格式编写的，上传到定岗实习平台后看起来可能有些怪*** 
+
+# 第八篇   序列化与反序列化
+
+## 概念
+
+Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。将程序中的对象，放入文件中保存就是序列化，将文件中的字节码重新转成对象就是反序列化。
+
+## 对象序列化
+
+* **作用：以内存为基准，把内存中的对象存储到磁盘文件中去，成为对象序列化。** 
+* 使用到的流是对象字节输出流：ObjectOutputSteam
+
+## 对象反序列化
+
+* 使用到的流是对象字节输入流：ObjectInputSteam
+* **作用：以内存为基准，把存储到磁盘文件中去的对象数据恢复成内存中的对象，成为反序列化。** 
+
+**构造器：** 
+
+* `public ObjectInputStream(InputSteam out)` : 把低级字节输入零六包装成高级的对象字节输入流
+
+**ObjectInputStream序列化方法：** 
+
+* `public Object readObject()` : 把存储到磁盘文件中去的对象数据恢复成内存中的对象返回
+
+## 实现Java对象序列化与反序列化的方法
+
+* **只有实现了Serializable或Externalizable接口的类的对象才能被序列化，否则抛出异常。** 
+
+* 还有一个注意点：如果类的属性包含其他的类，那么那些类也需要实现序列化接口，否则也会报错。
+
+**序列化的API** 
+
+* `java.io.ObjectOutputStream` 代表对象输出流，它的 `writeObject(Object obj)` 方法可对参数指定的obj对象进行序列化，把得到的字节序列写到一个目标输出流中。
+
+* `java.io.ObjectInputStream` 代表对象输入流，它的 `readObject()` 方法从一个源输入流中读取字节序列，再把它们反序列化为一个对象，并将其返回。
+  

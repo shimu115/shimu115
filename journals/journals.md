@@ -462,6 +462,80 @@ Serialization（序列化）是一种将对象以一连串的字节描述的过�
 **序列化的API** 
 
 * `java.io.ObjectOutputStream` 代表对象输出流，它的 `writeObject(Object obj)` 方法可对参数指定的obj对象进行序列化，把得到的字节序列写到一个目标输出流中。
-
 * `java.io.ObjectInputStream` 代表对象输入流，它的 `readObject()` 方法从一个源输入流中读取字节序列，再把它们反序列化为一个对象，并将其返回。
-  
+
+# 第九篇   springboot简单介绍
+
+## springboot简介
+
+SpringBoot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的初始搭建以及开发过程
+
+* spring的缺点
+  * 依赖设置繁琐
+  * 配置繁琐
+* SpringBoot程序优点
+  * 起步依赖（简化依赖配置）
+  * 自动配置（简化常用工程相关配置）
+  * 辅助功能（内置服务器，……）
+
+## springboot 的配置
+
+1. 开发SpringBoot程序要继承spring-boot-starter-parent
+2. spring-boot-starter-parent中定义了若干个依赖管理
+3. 继承parent模块可以避免多个依赖使用相同技术时出现依赖版本冲突
+4. 继承parent的形式也可以采用引入依赖的形式实现效果
+
+**解析：** 
+
+* starter
+  * SpringBoot中常见项目名称，定义了当前项目使用的所有依赖坐标，以达到减少依赖配置的目的
+* parent
+  * 所有SpringBoot项目要继承的项目，定义了若干个坐标版本号（依赖管理，而非依赖），以达到减少依赖冲突的目的
+  * spring-boot-starter-parent各版本间存在着诸多坐标版本不同
+* 实际开发
+  * 使用任意坐标时，仅书写GAV中的G和A，V由SpringBoot提供，除非SpringBoot未提供对应版本V
+  * 如发生坐标错误，再指定Version（要小心版本冲突）
+
+**内置服务器：** 
+
+* tomcat(默认)：apache出品，粉丝多，应用面广，负载了若干较重的组件
+* jetty：更轻量级，负载性能远不及tomcat
+* undertow：undertow，负载性能勉强跑赢tomcat
+
+# 第十篇 常用的配置文件
+
+配置文件常见有三种：
+
+1. xml
+2. yml
+3. yaml
+
+三种都有各自不同的优缺点
+
+1. xml
+
+   1989年，HTML诞生，它抛弃了SGML复杂庞大的缺点，继承了[SGML](https://baike.baidu.com/item/SGML/2901416?fromModule=lemma_inlink)的很多优点。HTML最大的特点是简单性和跨平台性。随着Web应用的不断发展，HTML的局限性也越来越明显地显现了出来，如HTML无法描述数据、可读性差、搜索时间长等。XML最初的设计目的是为了[EDI](https://baike.baidu.com/item/EDI/1049267?fromModule=lemma_inlink)(Electronic Data Interchange，电子数据交换)，确切地说是为EDI提供一个标准数据格式。( [来源百度百科]([可扩展标记语言_百度百科 (baidu.com)](https://baike.baidu.com/item/可扩展标记语言?fromtitle=xml文件&fromid=1994443&fromModule=lemma_search-box)) )但因为一些开发者认为，html能更方便我们的开发，所以xml并没有变成主流的语言，而渐渐成为了配置的文件。
+   
+2. yml
+
+   YAML (YAML Ain't a Markup Language)YAML不是一种标记语言，通常以.yml为后缀的文件，是一种直观的能够被电脑识别的数据序列化格式，并且容易被人类阅读，容易和脚本语言交互的，可以被支持YAML库的不同的编程语言程序导入，一种专门用来写配置文件的语言。
+
+3. yaml
+
+   与yml相同，他们的格式是分层级的，相对于xml来说，在看配置的时候能很清楚的看清每个配置，下面是yml和yaml的配置：
+
+   ~~~yml
+   server:
+     port: 5571
+   spring:
+     datasource:
+       driver-class-name: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://192.168.101.65:3306/xcplus_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
+       username: root
+       password: mysql
+   logging:
+     config: classpath:log4j2-dev.xml
+   ~~~
+
+   有数据库、端口的相关配置与日志的相关配置，如果写成xml，就相当繁琐，而且配置会比较多。
+

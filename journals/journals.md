@@ -28,23 +28,7 @@
     在对数据有排序需求的时候可以使用TreeMap, Hashtable是线程安全的，所以他的效率较低, 一般情况下使用HashMap就行了，
     HashMap虽然是线程不安全的，但它的效率高，而且HashMap的key和value能为null，而Hashtable是不能狗存入null的
 
-# 第二篇    collections 工具类
-
-学习完集合后，对于集合的一些工具类也必须有所了解
-
-
-1. sort(List list): 对集合中的元素排序;
-2. void sort(List list, Comparator c)：根据指定 Comparator 产生的顺序对 List 集合元素进行排序。
-3. reverse: 反转集合中的元素;
-4. shuffle: 打乱元素中的元素;
-5. fill: 用任意元素替换掉集合中的所有元素
-6. copy: 复制并覆盖相应索引的元素
-7. addAll: 一次性向集合里添加多条数据
-8. replaceAll: 使用一个新值 newVal 替换 List 对象的所有旧值 oldVal
-
-还有一些不是很常用的方法，一般情况下这几个就差不多够用了，需要其他的方法是可以上网查下其他方法的应用方式
-
-# 第三篇    Stream
+# 第二篇    Stream
 
 
 Stream流是链式编程，可以在简洁的代码里写出比较优质的代码，也能让代码的效率提升
@@ -111,7 +95,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
       6. map: 映射
       7. concat: 组合
 
-# 第四篇    异常
+# 第三篇    异常
 
 异常也是Java中必要重要的一节，在必要时候要知道这个异常是什么问题，这个异常该怎么处理。
 
@@ -232,7 +216,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
    ```
 
 
-# 第五篇   io流
+# 第四篇   io流
 
 在使用电脑的过程或者使用手机的过程都是会用到io流的，当你电脑上插入一个U盘，可以把一个视频，拷贝到你的电脑硬盘里。那么数据都是在哪些设备上的呢？键盘、内存、硬盘、外接设备等等。
 
@@ -264,7 +248,7 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
      * Reader: 字符输入流的顶级父类
      * Writer: 字符输出流的顶级父类
 
-# 第六篇   io的其他流
+# 第五篇   io的其他流
 
 上一篇的io流属于是比较基础的io流，效率比较低，这篇带来的是更加强大，效率更高的流。比如能够高效读写的缓冲流，能够转换编码的转换流，能够持久化存储对象的序列化流等等。这些功能更为强大的流，都是在基本的流对象基础之上创建而来的，就像穿上铠甲的武士一样，相当于是对基本流对象的一种增强。
 
@@ -385,6 +369,42 @@ Stream流是链式编程，可以在简洁的代码里写出比较优质的代�
         ![Snipaste_2023-02-13_10-50-36](img/Snipaste_2023-02-13_10-50-36.png)
 
         ![Snipaste_2023-02-13_10-51-21](img/Snipaste_2023-02-13_10-51-21.png)
+        
+
+
+
+# 第六篇   Linux
+
+## Linux简介
+
+Linux是作为服务器当中比较广泛的系统，他同样有Windows与macOS一样的图形面板和命令行面板，但与之不同的是，windows与macOS是图形面板比较好用，Linux与之相反，它的图形面板相对来说不是很成熟，命令行面板与其相比更加好用。
+
+Linux可以作为服务器的系统，原因是他更多的是使用命令进行操作系统，故而可以使用第三方软件去连接到服务器去做相应的一些操作，Windows与macOS的命令行不是那么好用，所以国内很多公司都会选择Linux去作为服务器的系统。
+
+## Linux基础命令
+
+1. **Linux命令基础格式** 
+
+   无论是什么命令，用于什么用途，在Linux中，命令有其通用的格式： `command [-options] [parameter]`
+
+   - command：命令本身
+   - -options：[可选，非必填]命令的一些参数选项，可以通过选项控制命令的行为细节
+   - parameter：[可选，非必填]命令的参数，多数用于命令的只想目标等
+
+2. 基础命令
+
+   1. ls：查看当前目录下的所有文件与文件夹
+
+      当不使用选项和参数，直接使用ls命令本体，表示：以平埔形式，列出当前工作目录下的内容
+
+      ![Snipaste_2023-02-14_11-15-18](img\Snipaste_2023-02-14_11-15-18.png)
+
+   2. cd/pwd
+
+      1. cd：通过cd命令来更改当前所在的工作目录
+      2. pwd：查看当前的工作目录
+
+   3. mkdir：创建文件夹，可以通过`-p`进行创建多层目录
 
 # 第七篇   git 版本控制
 
@@ -514,7 +534,7 @@ SpringBoot是由Pivotal团队提供的全新框架，其设计目的是用来简
 
 1. xml
 
-   1989年，HTML诞生，它抛弃了SGML复杂庞大的缺点，继承了[SGML](https://baike.baidu.com/item/SGML/2901416?fromModule=lemma_inlink)的很多优点。HTML最大的特点是简单性和跨平台性。随着Web应用的不断发展，HTML的局限性也越来越明显地显现了出来，如HTML无法描述数据、可读性差、搜索时间长等。XML最初的设计目的是为了[EDI](https://baike.baidu.com/item/EDI/1049267?fromModule=lemma_inlink)(Electronic Data Interchange，电子数据交换)，确切地说是为EDI提供一个标准数据格式。( [来源百度百科]([可扩展标记语言_百度百科 (baidu.com)](https://baike.baidu.com/item/可扩展标记语言?fromtitle=xml文件&fromid=1994443&fromModule=lemma_search-box)) )但因为一些开发者认为，html能更方便我们的开发，所以xml并没有变成主流的语言，而渐渐成为了配置的文件。
+   1989年，HTML诞生，它抛弃了SGML复杂庞大的缺点，继承了[SGML](https://baike.baidu.com/item/SGML/2901416?fromModule=lemma_inlink)的很多优点。HTML最大的特点是简单性和跨平台性。随着Web应用的不断发展，HTML的局限性也越来越明显地显现了出来，如HTML无法描述数据、可读性差、搜索时间长等。XML最初的设计目的是为了[EDI](https://baike.baidu.com/item/EDI/1049267?fromModule=lemma_inlink)(Electronic Data Interchange，电子数据交换)，确切地说是为EDI提供一个标准数据格式。( [来源百度百科](https://baike.baidu.com/item/可扩展标记语言?fromtitle=xml文件&fromid=1994443&fromModule=lemma_search-box) )但因为一些开发者认为，html能更方便我们的开发，所以xml并没有变成主流的语言，而渐渐成为了配置的文件。
    
 2. yml
 
@@ -539,3 +559,86 @@ SpringBoot是由Pivotal团队提供的全新框架，其设计目的是用来简
 
    有数据库、端口的相关配置与日志的相关配置，如果写成xml，就相当繁琐，而且配置会比较多。
 
+# 第十一篇   MySQL的事务
+
+## 四大特性  ACID
+
+- 原子性(Atomicity)：事务是不可分割的最小操作但愿，要么全部成功，要么全部失败
+- 一致性(Consistency)：事务完成时，必须使所有数据都保持一致状态
+- 隔离性(Isolation)：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行
+- 持久性(Durability)：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的
+
+## 并发事务
+
+* 脏读：一个事务读到另一个事务还没提交的数据
+* 不可重复读  一个事务先后读取同一条记录，但两次读取的数据不同
+* 幻读  一个事务按照条件查询数据时，没有对应的数据行，但是再插入数据时，又发现这行数据已经存在
+
+查看事务隔离级别：
+`SELECT @@TRANSACTION_ISOLATION;` 
+设置事务隔离级别：
+`SET [ SESSION | GLOBAL ] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE };` 
+SESSION 是会话级别，表示只针对当前会话有效，GLOBAL 表示对所有会话有效
+
+再写代码的时候可以直接使用spring的事务控制：
+
+直接使用注解 `@Transactional` 。
+
+# 第十二篇   MySQL的SQL优化
+
+1. 插入数据
+
+   普通插入：
+
+   1. 采用批量插入
+   2. 手动提交事务
+   3. 逐渐顺序插入
+
+   如果插入数据超过1000条，不建议使用insert语句，建议使用数据库提供的load指令进行插入，插入较快，性能较高
+
+2. 主键优化
+
+   数据组织方式：在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表（Index organized table, IOT）
+
+   主键设计原则：
+
+   - 满足业务需求的情况下，尽量降低主键的长度
+   - 插入数据时，尽量选择顺序插入，选择使用 AUTO_INCREMENT 自增主键
+   - 尽量不要使用 UUID 做主键或者是其他的自然主键，如身份证号
+   - 业务操作时，避免对主键的修改
+
+3. order by优化
+
+   1. Using filesort：通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区 sort buffer 中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫 FileSort 排序
+   2. Using index：通过有序索引顺序扫描直接返回有序数据，这种情况即为 using index，不需要额外排序，操作效率高
+
+4. group by优化
+
+   - 在分组操作时，可以通过索引来提高效率
+   - 分组操作时，索引的使用也是满足最左前缀法则的
+
+   如索引为`idx_user_pro_age_stat`，则句式可以是 `select ... where profession order by age` ，这样也符合最左前缀法则
+
+5. limit优化
+
+   limit在查询数据量较小的时候可以使用，一旦数据量很多的时候就需要进行优化，例如在 `9000000~9000010` 条数据时，消耗可能会在半分钟左右，他是先进行排序，我们可以通过 `覆盖查询+子查询` 的方式进行优化，官方也是这么给出的优化方式
+
+6. count优化
+
+   MyISAM 引擎把一个表的总行数存在了磁盘上，因此执行 count(\*) 的时候会直接返回这个数，效率很高（前提是不适用where）；
+   InnoDB 在执行 count(\*) 时，需要把数据一行一行地从引擎里面读出来，然后累计计数。
+   优化方案：自己计数，如创建key-value表存储在内存或硬盘，或者是用redis。
+
+   最好还是用count(*)进行查询，否则会多出二次查询
+
+7. update优化
+
+   InnoDB 的行锁是针对索引加的锁，不是针对记录加的锁，并且该索引不能失效，否则会从行锁升级为表锁。
+
+   如以下两条语句：
+   `update student set no = '123' where id = 1;` ，这句由于id有主键索引，所以只会锁这一行；
+   `update student set no = '123' where name = 'test';` ，这句由于name没有索引，所以会把整张表都锁住进行数据更新，解决方法是给name字段添加索引
+
+   **update在没有索引的时候，他的行锁会自动升级成表锁，导致整张表都不能进行DML操作，也会降低其他操作的性能** 
+
+   

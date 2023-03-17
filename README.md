@@ -38,15 +38,24 @@
 > >
 > > [第十篇 常用的配置文件](journals/journals?id=第十篇-常用的配置文件) 
 > >
-> > [第十一篇 MySQL的事务](http://localhost:3000/#/journals/journals?id=第十一篇-mysql的事务) 
+> > [第十一篇 MySQL的事务](journals/journals?id=第十一篇-mysql的事务) 
 > >
-> > > [四大特性 ACID](http://localhost:3000/#/journals/journals?id=四大特性-acid) 
+> > > [四大特性 ACID](journals/journals?id=四大特性-acid) 
 > > >
-> > > [并发事务](http://localhost:3000/#/journals/journals?id=并发事务) 
+> > > [并发事务](journals/journals?id=并发事务) 
 > >
-> > [第十二篇 MySQL的SQL优化](http://localhost:3000/#/journals/journals?id=第十二篇-mysql的sql优化) 
+> > [第十二篇 MySQL的SQL优化](journals/journals?id=第十二篇-mysql的sql优化) 
 >
-> [总结]() 
+> [总结](summarize/summarize.md) 
 >
-> > [总结【三千字】]() 
-
+> > [工作心得](summarize/summarize?id=一、工作心得) 
+> >
+> > [学习过程](summarize/summarize?id=二、学习过程) 
+> >
+> > > [基础](summarize/summarize?id=_1-基础) 
+> > >
+> > > [mysql的进阶及高级用法](summarize/summarize?id=_2-mysql的进阶及高级用法) 
+> > >
+> > > [mybatis-plus](summarize/summarize?id=_3-mybatis-plus) 
+> >
+> > [总结](summarize/summarize?id=三、总结) 
